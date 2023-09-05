@@ -57,9 +57,11 @@ public class HotelManagementRepository
             }
             if(count==max)
             {
-                ans=ans.compareTo(hotelname)>=0?ans:hotelname;
+                ans=ans.compareTo(hotelname)<0?hotelname:ans;
             }
         }
+        if(max==0)
+            return "";
         return ans;
     }
 
